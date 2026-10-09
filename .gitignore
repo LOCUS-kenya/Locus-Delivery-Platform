@@ -1,0 +1,72 @@
+﻿# Secrets and environment variables
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Local databases and database files
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# User uploads and private files
+uploads/
+
+# Backups
+*.bak
+*.backup
+*.old
+server-before-*.js
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Additional local and sensitive files
+.env-*
+*.env
+*.env.*
+!.env.example
+*.js.backup
+*.js.before-*
+data-backup/
+
+# Historical server copies — keep local, do not publish
+server-backup*.js
+server-broken*.js
+server-clean-before*.js
+server-current-clean*.js
+server-damaged*.js
+server.js.backup*
+server.js.before-*
+
+# Accidental zero-byte command fragments
+1000
+2000
+const
+copy
+customer_id
+dropoff
+INSERT
+node
+notepad
+pickup
+powershell
+req.session.user.id
+service
+type
+u.role
+
+# Public asset backups
+public/service-worker-before-*.js
+public/style-before-*.css

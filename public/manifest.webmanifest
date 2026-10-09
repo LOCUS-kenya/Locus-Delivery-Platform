@@ -1,0 +1,23 @@
+{
+  "name": "Locus Delivery Solution",
+  "short_name": "Locus",
+  "description": "Delivery, errands, parcels and more with Locus.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#071C35",
+  "theme_color": "#071C35",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/locuslogo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/locuslogo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
