@@ -1,4 +1,4 @@
-﻿require('dotenv').config();
+require('dotenv').config();
 const path = require('path');
 const fs = require('fs');
 const crypto = require('crypto');
@@ -363,7 +363,9 @@ const businessProductPhotoUpload = multer({
    DATABASE
 ========================================================= */
 
-const db = new Database(path.join(__dirname, 'data', 'locus.db'));
+const dataDir = path.join(__dirname, 'data');
+fs.mkdirSync(dataDir, { recursive: true });
+const db = new Database(path.join(dataDir, 'locus.db'));
 db.exec(`
 CREATE TABLE IF NOT EXISTS users (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -1432,7 +1434,7 @@ ensureInitialAdmin();
    SESSION SECRET
 ========================================================= */
 
-const dataDir = path.join(__dirname, 'data');
+
 const appSecret = process.env.SESSION_SECRET;
 
 if (!appSecret || appSecret.length < 32) {
