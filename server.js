@@ -475,6 +475,7 @@ const userColumns = db
   .map(c => c.name);
 
 const verificationColumns = [
+  ['admin_type', 'TEXT'],
   ['locus_id', 'TEXT'],
   ['approval_status', "TEXT NOT NULL DEFAULT 'approved'"],
   ['worker_type', "TEXT NOT NULL DEFAULT 'rider'"],
