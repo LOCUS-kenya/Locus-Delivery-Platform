@@ -1,4 +1,4 @@
-require('dotenv').config();
+﻿require('dotenv').config();
 const path = require('path');
 const fs = require('fs');
 const crypto = require('crypto');
@@ -373,7 +373,7 @@ CREATE TABLE IF NOT EXISTS users (
   email TEXT UNIQUE NOT NULL,
   phone TEXT NOT NULL,
   password_hash TEXT NOT NULL,
-  role TEXT NOT NULL CHECK(role IN ('customer','rider','dispatcher','admin')),
+  role TEXT NOT NULL CHECK(role IN ('customer','rider','dispatcher','admin','business')),
   active INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
@@ -469,6 +469,18 @@ CREATE TABLE IF NOT EXISTS business_order_trips (
    RIDER / ERRAND VERIFICATION FIELDS
 ========================================================= */
 
+db.exec(`
+  CREATE TABLE IF NOT EXISTS order_events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    order_id INTEGER NOT NULL,
+    user_id INTEGER,
+    event TEXT NOT NULL,
+    notes TEXT,
+    created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY(order_id) REFERENCES orders(id),
+    FOREIGN KEY(user_id) REFERENCES users(id)
+  )
+`);
 const userColumns = db
   .prepare('PRAGMA table_info(users)')
   .all()
@@ -500,7 +512,8 @@ const verificationColumns = [
   ['business_address', 'TEXT'],
   ['business_account_number', 'TEXT'],
   ['business_profile_photo_path', 'TEXT'],
-  ['deleted_at', 'TEXT']
+  ['deleted_at', 'TEXT'],
+  ['last_seen', 'TEXT']
 ];
 
 for (const [column, definition] of verificationColumns) {
@@ -3526,7 +3539,7 @@ function page(title, body, req) {
             font-size:21px;
           "
         >
-          <span aria-hidden="true" style="font-size:28px;line-height:1;">â‹®</span>
+          <span aria-hidden="true" style="font-size:28px;line-height:1;">Ã¢â€¹Â®</span>
         </button>
 
       </div>
@@ -20809,7 +20822,7 @@ app.get(
               font-size:64px;
               line-height:1.2;
               margin-bottom:18px;
-            ">🚧</div>
+            ">ðŸš§</div>
 
             <p style="
               margin:0 0 8px;
@@ -20838,7 +20851,7 @@ app.get(
               color:#667085;
               font-size:16px;
               line-height:1.7;
-            ">Stay updated. We’re working on something great for you.</p>
+            ">Stay updated. Weâ€™re working on something great for you.</p>
 
             <a href="/customer" style="
               display:inline-flex;
