@@ -495,6 +495,11 @@ const verificationColumns = [
   ['insurance_verified', 'INTEGER NOT NULL DEFAULT 0'],
   ['profile_verified', 'INTEGER NOT NULL DEFAULT 0'],
   ['suspension_reason', 'TEXT'],
+  ['business_name', 'TEXT'],
+  ['business_registration_number', 'TEXT'],
+  ['business_address', 'TEXT'],
+  ['business_account_number', 'TEXT'],
+  ['business_profile_photo_path', 'TEXT'],
   ['deleted_at', 'TEXT']
 ];
 
