@@ -1400,6 +1400,8 @@ function ensureInitialAdmin() {
   const password = process.env.ADMIN_PASSWORD || '';
   const name = process.env.ADMIN_NAME || 'Locus Admin';
   const phone = process.env.ADMIN_PHONE || '0000000000';
+  const repairEnabled =
+    String(process.env.REPAIR_SUPER_ADMIN || '').trim().toLowerCase() === 'true';
 
   if (!email || !password) return;
 
@@ -1407,31 +1409,61 @@ function ensureInitialAdmin() {
     throw new Error('ADMIN_PASSWORD must be at least 12 characters.');
   }
 
-  const existing = db
-    .prepare("SELECT id FROM users WHERE role='admin' LIMIT 1")
-    .get();
+  const configuredAdmin = db.prepare(`
+    SELECT id
+    FROM users
+    WHERE LOWER(email)=? AND role='admin'
+    LIMIT 1
+  `).get(email);
 
-  if (!existing) {
-const result = db.prepare(`
-  INSERT INTO users(
+  if (configuredAdmin) {
+    if (repairEnabled) {
+      db.prepare(`
+        UPDATE users
+        SET admin_type='super'
+        WHERE id=?
+      `).run(configuredAdmin.id);
+
+      console.log('Super Admin recovery applied to configured admin account.');
+    }
+
+    return;
+  }
+
+  const existingAdmin = db.prepare(`
+    SELECT id
+    FROM users
+    WHERE role='admin'
+    LIMIT 1
+  `).get();
+
+  if (existingAdmin) {
+    console.warn(
+      'Configured ADMIN_EMAIL does not match the existing admin account. ' +
+      'No account was created or promoted.'
+    );
+    return;
+  }
+
+  const result = db.prepare(`
+    INSERT INTO users (
+      name,
+      email,
+      phone,
+      password_hash,
+      role,
+      admin_type
+    )
+    VALUES (?, ?, ?, ?, 'admin', 'super')
+  `).run(
     name,
     email,
     phone,
-    password_hash,
-    role
-  )
-  VALUES(?,?,?,?, 'admin')
-`).run(
-  name,
-  email,
-  phone,
-  bcrypt.hashSync(password, 12)
-);
+    bcrypt.hashSync(password, 12)
+  );
 
-assignNewUserLocusId(result.lastInsertRowid);
-
-    console.log(`Initial Locus admin created: ${email}`);
-  }
+  assignNewUserLocusId(result.lastInsertRowid);
+  console.log('Initial Super Admin created.');
 }
 
 ensureInitialAdmin();
