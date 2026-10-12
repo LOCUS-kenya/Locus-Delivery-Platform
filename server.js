@@ -500,7 +500,8 @@ const verificationColumns = [
   ['business_address', 'TEXT'],
   ['business_account_number', 'TEXT'],
   ['business_profile_photo_path', 'TEXT'],
-  ['deleted_at', 'TEXT']
+  ['deleted_at', 'TEXT'],
+  ['last_seen', 'TEXT']
 ];
 
 for (const [column, definition] of verificationColumns) {
@@ -712,6 +713,10 @@ const operationalOrderColumns = [
   ['pickup_arrival_longitude', 'REAL'],
   ['dropoff_arrival_latitude', 'REAL'],
   ['dropoff_arrival_longitude', 'REAL'],
+  ['pickup_latitude', 'REAL'],
+  ['pickup_longitude', 'REAL'],
+  ['dropoff_latitude', 'REAL'],
+  ['dropoff_longitude', 'REAL'],
   ['cancellation_reason', 'TEXT'],
   ['cancelled_by', 'TEXT'],
   ['cancelled_at', 'TEXT'],
