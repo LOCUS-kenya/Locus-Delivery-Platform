@@ -501,7 +501,8 @@ const verificationColumns = [
   ['business_account_number', 'TEXT'],
   ['business_profile_photo_path', 'TEXT'],
   ['deleted_at', 'TEXT'],
-  ['last_seen', 'TEXT']
+  ['last_seen', 'TEXT'],
+  ['completed_orders', 'INTEGER NOT NULL DEFAULT 0']
 ];
 
 for (const [column, definition] of verificationColumns) {
