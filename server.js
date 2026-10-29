@@ -1427,14 +1427,15 @@ function ensureInitialAdmin() {
 
   if (!existing) {
 const result = db.prepare(`
-  INSERT INTO users(
-    name,
-    email,
-    phone,
-    password_hash,
-    role
-  )
-  VALUES(?,?,?,?, 'admin')
+INSERT INTO users(
+  name,
+  email,
+  phone,
+  password_hash,
+  role,
+  admin_type
+)
+VALUES(?,?,?,?, 'admin', 'super')
 `).run(
   name,
   email,
