@@ -1,0 +1,306 @@
+﻿:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#eef4ff;background:#07152f;line-height:1.5;font-synthesis:none}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 20% 0%,#12366d 0,#07152f 38%,#050d1e 100%)}a{color:#7db7ff;text-decoration:none}a:hover{text-decoration:underline}.site-header{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(5,14,31,.75);backdrop-filter:blur(12px);position:sticky;top:0;z-index:5}.brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:900;letter-spacing:.08em}.brand:hover{text-decoration:none}.brand small{display:block;font-size:8px;letter-spacing:.22em;color:#89a5cc}.brand-mark{width:36px;height:36px;border:2px solid #8bbdff;border-radius:11px;display:grid;place-items:center;color:#8bbdff;font-size:21px}.site-header nav{display:flex;align-items:center;gap:20px}.site-header nav a,.nav-link{color:#dce9ff;font-weight:650;background:none;border:0;cursor:pointer;font:inherit}.nav-btn{border:1px solid #417dc8;padding:9px 15px;border-radius:10px;background:#10336b}.inline{display:inline}.hero{max-width:1120px;margin:0 auto;padding:90px 6% 65px;display:grid;grid-template-columns:1.3fr .7fr;gap:45px;align-items:center}.pill{display:inline-block;padding:6px 10px;border:1px solid rgba(130,187,255,.35);background:rgba(64,127,206,.13);border-radius:999px;color:#8dc1ff;font-size:12px;font-weight:800;letter-spacing:.12em}.hero h1{font-size:clamp(48px,7vw,84px);line-height:.98;margin:18px 0}.hero h1 span{color:#6aaeff}.lead{font-size:20px;color:#b8c9e2;max-width:650px}.hero-card,.card,.feature,.stat{border:1px solid rgba(139,190,255,.16);background:linear-gradient(145deg,rgba(19,48,91,.9),rgba(8,22,48,.9));box-shadow:0 20px 60px rgba(0,0,0,.2);border-radius:20px}.hero-card{padding:34px}.mini-icon{font-size:44px}.status{margin-top:28px;padding:12px;border-radius:12px;background:rgba(50,190,125,.09);color:#a8e4c5}.status i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#43d38a;margin-right:8px}.actions{display:flex;gap:10px;align-items:center;margin-top:22px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:11px;padding:11px 18px;background:#2878db;color:#fff;font-weight:800;cursor:pointer;text-decoration:none;min-height:44px}.btn:hover{background:#3a89e8;text-decoration:none}.btn.ghost{background:transparent;border:1px solid #416994}.btn.danger{background:#8d3347}.btn.small{min-height:38px;padding:7px 12px}.btn.full{width:100%}.grid{max-width:1120px;margin:0 auto;padding:0 6% 70px}.grid.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:26px}.feature b{color:#6aaeff}.feature h2{margin:8px 0}.feature p,.muted{color:#a8bad5}.auth-wrap{max-width:600px;margin:65px auto;padding:0 20px}.card{padding:28px;margin-bottom:20px}.narrow{max-width:650px;margin:30px auto}.card h1{font-size:34px;margin:10px 0}.card h2{margin-top:0}.card p{color:#b8c9e2}label{display:block;margin:16px 0;font-weight:700;color:#dce8fa}input,select{display:block;width:100%;margin-top:7px;border:1px solid #385578;background:#07182f;color:#eef4ff;border-radius:10px;padding:12px;font:inherit;outline:none}input:focus,select:focus{border-color:#6aaeff;box-shadow:0 0 0 3px rgba(106,174,255,.13)}label small{display:block;color:#8ea6c7;font-weight:400;margin-top:5px}.alert{padding:13px 15px;border-radius:10px;background:rgba(234,98,98,.12);border:1px solid rgba(234,98,98,.3);color:#ffb8b8;margin-bottom:15px}.page-head{max-width:1120px;margin:45px auto 22px;padding:0 6%;display:flex;justify-content:space-between;gap:25px;align-items:end}.page-head h1{font-size:42px;margin:8px 0}.page-head p{color:#a8bad5}.dashboard-head{max-width:1120px;margin:50px auto 20px;display:flex;justify-content:space-between;align-items:center;gap:25px}.dashboard-head h1{margin:8px 0}.stat{padding:22px}.stat span{display:block;color:#8ea6c7;font-size:13px}.stat strong{font-size:24px}.order{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1)}.order:last-child{border-bottom:0}.order-top{display:flex;justify-content:space-between;gap:15px;align-items:center}.order p{margin:8px 0;color:#d4e0f1}.badge{font-size:11px;text-transform:uppercase;letter-spacing:.08em;border-radius:999px;padding:5px 9px;background:#24466f;color:#bcd8f8}.badge.pending{background:#604f20;color:#ffe5a0}.badge.accepted,.badge.on_the_way{background:#174c60;color:#9de6ff}.badge.delivered{background:#1c593c;color:#a7f2c7}.badge.cancelled{background:#5e2938;color:#ffb6c5}.actions{display:flex}.status-line{margin-top:12px;color:#8fe0b3}.assign{display:flex;gap:8px;max-width:500px;margin-top:15px}.assign select{margin:0}.table-head,.table-row{display:grid;grid-template-columns:60px 1.5fr 1fr 1fr;gap:10px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);align-items:center}.table-head{color:#8ea6c7;font-size:12px;text-transform:uppercase}.table-row span{color:#a8bad5}footer{text-align:center;color:#7288a8;font-size:12px;padding:25px 15px 40px}@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:55px}.grid.three{grid-template-columns:1fr}.page-head,.dashboard-head{align-items:flex-start;flex-direction:column}.site-header{padding:0 4%}.site-header nav{gap:10px}.table-head,.table-row{grid-template-columns:40px 1fr 1fr}.table-head span:last-child,.table-row span:last-child{display:none}.hero h1{font-size:52px}}
+.brand-logo {
+  width: 120px;
+  height: auto;
+  max-height: 55px;
+  object-fit: contain;
+  display: block;
+}
+/* =========================================================
+   LOCUS MOBILE BOTTOM NAVIGATION CLEARANCE
+   Keeps final page buttons visible above the fixed nav.
+   Applies to Delivery, Errand, Shopping and Laundry.
+   ========================================================= */
+
+body {
+  padding-bottom: 130px !important;
+}
+
+form {
+  padding-bottom: 20px;
+}
+
+button[type="submit"],
+.btn[type="submit"] {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding-bottom: 140px !important;
+  }
+
+  form {
+    padding-bottom: 25px;
+  }
+
+  button[type="submit"],
+  .btn[type="submit"] {
+    margin-bottom: 25px;
+  }
+}
+
+/* ================================
+   LOCUS FINANCE DETAIL TABLE
+   ================================ */
+
+.finance-table-wrap {
+  width: calc(100vw - 40px);
+  max-width: none;
+  margin: 20px auto 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.finance-detail-table,
+.finance-table {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: auto;
+  background: #071a33;
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Table headings */
+.finance-detail-table th,
+.finance-table th {
+  padding: 18px 24px;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: #0b294d;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+}
+
+/* Table values */
+.finance-detail-table td,
+.finance-table td {
+  padding: 18px 24px;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  line-height: 1.5;
+  font-size: 14px;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+/* Keep columns visually separated */
+.finance-detail-table th + th,
+.finance-detail-table td + td,
+.finance-table th + th,
+.finance-table td + td {
+  padding-left: 28px;
+}
+
+/* Last row */
+.finance-detail-table tbody tr:last-child td,
+.finance-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Row hover */
+.finance-detail-table tbody tr:hover,
+.finance-table tbody tr:hover {
+  background: rgba(255,255,255,.045);
+}
+
+/* ================================
+   PROPORTIONAL COLUMN WIDTHS
+   ================================ */
+
+.finance-detail-table th:nth-child(1),
+.finance-detail-table td:nth-child(1) {
+  width: 11%;
+}
+
+.finance-detail-table th:nth-child(2),
+.finance-detail-table td:nth-child(2) {
+  width: 13%;
+}
+
+.finance-detail-table th:nth-child(3),
+.finance-detail-table td:nth-child(3) {
+  width: 13%;
+}
+
+.finance-detail-table th:nth-child(4),
+.finance-detail-table td:nth-child(4) {
+  width: 12%;
+}
+
+.finance-detail-table th:nth-child(5),
+.finance-detail-table td:nth-child(5) {
+  width: 12%;
+}
+
+.finance-detail-table th:nth-child(6),
+.finance-detail-table td:nth-child(6) {
+  width: 12%;
+}
+
+.finance-detail-table th:nth-child(7),
+.finance-detail-table td:nth-child(7) {
+  width: 13.5%;
+}
+
+.finance-detail-table th:nth-child(8),
+.finance-detail-table td:nth-child(8) {
+  width: 13.5%;
+}
+
+
+/* ================================
+   STATUS CELLS
+   ================================ */
+
+.finance-detail-table .status,
+.finance-table .status {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+
+/* ================================
+   FINANCE PAGE TITLE
+   ================================ */
+
+.finance-detail-title {
+  margin: 24px 20px 8px;
+  color: #071a33;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.finance-detail-subtitle {
+  margin: 0 20px 18px;
+  color: #666;
+  font-size: 14px;
+}
+
+
+/* ================================
+   MOBILE / SMALL SCREENS
+   ================================ */
+
+@media (max-width: 900px) {
+
+  .finance-table-wrap {
+    width: calc(100vw - 24px);
+    margin: 15px auto 25px;
+  }
+
+  .finance-detail-table,
+  .finance-table {
+    min-width: 1100px;
+  }
+
+  .finance-detail-table th,
+  .finance-detail-table td,
+  .finance-table th,
+  .finance-table td {
+    padding: 15px 20px;
+  }
+}
+
+/* Locus landing-page brand accents */
+.landing-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #071C35;
+  color: #D4AF37;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  line-height: 1;
+}
+
+.landing-brand {
+  color: #D4AF37;
+  font-weight: 800;
+}
+
+/* =========================================================
+   LOCUS ADMIN DASHBOARD LAYOUT
+   ========================================================= */
+
+.admin-growth-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 16px 0;
+  padding: 14px;
+  overflow: hidden;
+}
+
+.admin-growth-card .growth-chart-wrap {
+  width: 100%;
+  max-width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.admin-growth-card canvas {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  height: 100% !important;
+  box-sizing: border-box;
+}
+
+
+/* Bottom three dashboard cards */
+
+.admin-dashboard-bottom-row {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  box-sizing: border-box;
+  margin-top: 16px;
+}
+
+.admin-dashboard-bottom-row > .card {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+/* Keep the three cards inside the screen on smaller displays */
+
+@media (max-width: 900px) {
+
+  .admin-dashboard-bottom-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .admin-dashboard-bottom-row {
+    grid-template-columns: 1fr;
+  }
+
+}
