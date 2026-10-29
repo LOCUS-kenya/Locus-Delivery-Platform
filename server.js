@@ -1,4 +1,4 @@
-﻿require('dotenv').config();
+require('dotenv').config();
 const path = require('path');
 const fs = require('fs');
 const crypto = require('crypto');
@@ -16822,7 +16822,7 @@ app.get(
   (req, res) => {
     res.send(page('Customer Wallet', `
       <div style="max-width:680px;margin:40px auto;padding:36px 24px;text-align:center;background:#fff;border:1px solid #e5e7eb;border-radius:18px;">
-        <div style="font-size:48px;color:#D4AF37;">Ã¢â€”Â·</div>
+        <div style="font-size:48px;color:#D4AF37;">&#9679;</div>
         <h1 style="color:#0B294D;">Wallet Coming Soon</h1>
         <p style="font-size:17px;color:#475569;">We are working on the Locus Customer Wallet.</p>
         <p style="font-size:16px;font-weight:600;color:#D4AF37;">Stay Updated!</p>
@@ -22041,7 +22041,7 @@ app.get(
   (req, res) => {
     res.send(page('Business Wallet', `
       <div style="max-width:680px;margin:40px auto;padding:36px 24px;text-align:center;background:#fff;border:1px solid #e5e7eb;border-radius:18px;">
-        <div style="font-size:48px;color:#D4AF37;">Ã¢â€”Â·</div>
+        <div style="font-size:48px;color:#D4AF37;">&#9679;</div>
         <h1 style="color:#0B294D;">Wallet Coming Soon</h1>
         <p style="font-size:17px;color:#475569;">We are working on the Locus Business Wallet.</p>
         <p style="font-size:16px;font-weight:600;color:#D4AF37;">Stay Updated!</p>
