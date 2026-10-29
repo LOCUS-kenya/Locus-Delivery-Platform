@@ -716,6 +716,10 @@ function assignNewUserLocusId(userId) {
   .map(c => c.name);
 
 const operationalOrderColumns = [
+  ['pickup_latitude', 'REAL'],
+  ['pickup_longitude', 'REAL'],
+  ['dropoff_latitude', 'REAL'],
+  ['dropoff_longitude', 'REAL'],
   ['payment_method', "TEXT NOT NULL DEFAULT 'pay_now'"],
   ['arrived_at_pickup', 'TEXT'],
   ['picked_up_at', 'TEXT'],
