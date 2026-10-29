@@ -215,6 +215,8 @@ function escapeHtml(value) {
 }
 
 const app = express();
+const uploadsDir = process.env.UPLOADS_DIR || path.join(__dirname, 'uploads');
+fs.mkdirSync(uploadsDir, { recursive: true });
 const promotionUpload = multer({
   dest: path.join(
     uploadsDir,
@@ -249,8 +251,6 @@ const promotionUpload = multer({
 
   }
 });
-const uploadsDir = process.env.UPLOADS_DIR || path.join(__dirname, 'uploads');
-fs.mkdirSync(uploadsDir, { recursive: true });
 const riderUpload = multer({
   dest: path.join(uploadsDir, 'riders'),
   limits: {
@@ -3544,7 +3544,7 @@ function page(title, body, req) {
             font-size:21px;
           "
         >
-          <span aria-hidden="true" style="font-size:28px;line-height:1;">ÃƒÂ¢Ã¢â‚¬Â¹Ã‚Â®</span>
+          <span aria-hidden="true" style="font-size:28px;line-height:1;">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¹Ãƒâ€šÃ‚Â®</span>
         </button>
 
       </div>
@@ -16816,7 +16816,7 @@ app.get(
   (req, res) => {
     res.send(page('Customer Wallet', `
       <div style="max-width:680px;margin:40px auto;padding:36px 24px;text-align:center;background:#fff;border:1px solid #e5e7eb;border-radius:18px;">
-        <div style="font-size:48px;color:#D4AF37;">â—·</div>
+        <div style="font-size:48px;color:#D4AF37;">Ã¢â€”Â·</div>
         <h1 style="color:#0B294D;">Wallet Coming Soon</h1>
         <p style="font-size:17px;color:#475569;">We are working on the Locus Customer Wallet.</p>
         <p style="font-size:16px;font-weight:600;color:#D4AF37;">Stay Updated!</p>
@@ -22035,7 +22035,7 @@ app.get(
   (req, res) => {
     res.send(page('Business Wallet', `
       <div style="max-width:680px;margin:40px auto;padding:36px 24px;text-align:center;background:#fff;border:1px solid #e5e7eb;border-radius:18px;">
-        <div style="font-size:48px;color:#D4AF37;">â—·</div>
+        <div style="font-size:48px;color:#D4AF37;">Ã¢â€”Â·</div>
         <h1 style="color:#0B294D;">Wallet Coming Soon</h1>
         <p style="font-size:17px;color:#475569;">We are working on the Locus Business Wallet.</p>
         <p style="font-size:16px;font-weight:600;color:#D4AF37;">Stay Updated!</p>
