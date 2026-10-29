@@ -3550,7 +3550,7 @@ function page(title, body, req) {
             font-size:21px;
           "
         >
-          <span aria-hidden="true" style="font-size:28px;line-height:1;">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¹Ãƒâ€šÃ‚Â®</span>
+          <span aria-hidden="true" style="font-size:28px;line-height:1;">&#9776;</span>
         </button>
 
       </div>
