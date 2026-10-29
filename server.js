@@ -488,6 +488,7 @@ const userColumns = db
   .map(c => c.name);
 
 const verificationColumns = [
+  ['score', 'REAL NOT NULL DEFAULT 5.0'],
   ['completed_orders', 'INTEGER NOT NULL DEFAULT 0'],
   ['admin_type', 'TEXT'],
   ['locus_id', 'TEXT'],
